@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio FAQ IDARTES</title>
+    <style>
+        body {
+            overflow-y: hidden;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #eef1f5;
+            align-items: center;
+            height: 100vh;
+            
+            
+        }
+
+        .roboto-flex {
+        font-family: "Roboto Flex", serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        font-variation-settings:
+            "slnt" 0,
+            "wdth" 100,
+            "GRAD" 0,
+            "XOPQ" 96,
+            "XTRA" 468,
+            "YOPQ" 79,
+            "YTAS" 750,
+            "YTDE" -203,
+            "YTFI" 738,
+            "YTLC" 514,
+            "YTUC" 712;
+        }
+        .madimi-one-regular {
+            font-family: "Madimi One", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .head{
+            height: 100px;
+            display: flex;
+            max-width: 100%;
+            background-color: #664a93;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            
+
+
+        }
+
+        .banner-container {
+            max-width:  100%;
+            height: 750px;
+            display: flex;
+            flex-wrap: wrap; /* Permite que los banners se ajusten a nuevas filas */
+            justify-content: center; /* Centra horizontalmente los banners */
+            gap: 50px; /* Espaciado entre los banners */
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .banner {
+
+            font-size: small;
+            width: 180px;
+            height: 180px;
+            background-color: #ebf5fb;
+            border-radius: 50px;
+            display: flex; /* Flexbox para alinear contenido */
+            flex-direction: column; /* Organiza el contenido en columna */
+            justify-content: center; /* Centra verticalmente el contenido */
+            align-items: center; /* Centra horizontalmente el contenido */
+            box-shadow: 0 10px 16px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 10px; /* Espaciado interno */
+            transition: transform 0.3s ease;
+            text-decoration: none;
+            
+        }
+        .banner-link{
+            width: 180px;
+            height: 180px;
+            z-index: 1;
+        }
+
+        .logos {
+            max-width: 100px; /* Tamaño máximo de la imagen */
+            height: auto;
+            margin-top: 10px; /* Espaciado entre el texto y la imagen */
+            object-fit: cover;
+            
+        }
+        .banner:hover{
+            transform: scale(1.2);
+        }
+
+        /* Diseño responsivo */
+        @media (max-width: 768px) {
+            .banner-container {
+                max-width: 100%;
+                gap: 10px; /* Reduce el espacio entre banners en pantallas pequeñas */
+            }
+
+            .banner {
+                width: 150px;
+                height: 150px; /* Reduce el tamaño de los banners en pantallas pequeñas */
+            }
+        }
+
+
+        /* Estilo general del pie de página */
+        .footer-banner {
+        position: relative;
+        height: 100px;
+        background: black;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        position:fixed;
+        width: 100%; /* Asegura que ocupe todo el ancho de la ventana */
+        box-sizing: border-box;
+        padding: 0%; /* Espaciado interno */
+        z-index: 998;
+        
+        }
+
+        /* Contenido dentro del pie de página */
+        .footer-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        color: whitesmoke;
+        flex-wrap: wrap;
+        line-height: 1.0;
+        text-align: center;
+        
+        }
+
+
+        /* Títulos y texto */
+        .footer-content h3 {
+        font-size: large;
+        margin: 5px 0;
+        }
+
+        .footer-content p {
+        float: center;
+        font-size: 0.9rem;
+        margin: 3px 0;
+        line-height: 1.0;
+
+        }
+        .footer-logo-container{
+            position: absolute;
+            max-height: auto;
+            max-width: 300px;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            display: flex;
+            z-index: 999;
+        }
+        .footer-image{
+            float: right;
+            width: 100%;
+            height: auto;
+
+        }
+
+        .footer-content a{
+            font-size: small;
+            margin-bottom: 1px;
+
+
+        }
+
+        /* Estilo de íconos o enlaces sociales */
+        .social-icons a {
+        color: #fff; /* Color de los enlaces */
+        text-decoration: none; /* Quita subrayado */
+        margin: 0 5px; /* Espaciado entre íconos */
+        font-size: 0.9rem; /* Tamaño del texto */
+        transition: color 0.3s ease; /* Efecto de transición */
+        line-height: 1;
+        }
+
+        .social-icons a:hover {
+        color: #1e90ff; /* Cambia de color al pasar el cursor */
+        }
+
+            /* Estilo responsivo */
+            @media (max-width: 768px) {
+        .footer-content h3 {
+            font-size: 1.2rem;
+        }
+
+        .footer-content p {
+            font-size: 0.9rem;
+        }
+
+        .social-icons a {
+            font-size: 1rem;
+            margin: 0 5px;
+        }
+    }
+
+
+    </style>
+</head>
+<body>
+<div class="body">
+    <div class="head">
+        <h1 class="madimi-one-regular">SISTEMAS DE INFORMACIÓN IDARTES</h1>
+    </div>
+    <div class="banner-container">
+        <div class="banner">
+            <a href="" style="text-decoration: none; color: inherit;" name="Usuarios" class="banner-link"Ir a pagina>
+            <h1 class="madimi-one-regular">USUARIOS SISTEMAS DE INFORMACIÓN</h1>
+            
+                <img src="" alt="" class="logos" >
+            </a>
+    </div>
+        <div class="banner">
+            <a href="Pandora/Modulos/Modulos_pandora.html" style="text-decoration: none; color: inherit;" name="Pandora" class="banner-link"Ir a pagina>
+                <h1 class="madimi-one-regular">PANDORA</h1>
+                <img src="Logos/Pandora.png" alt="Logo Pandora" class="logos">
+            </a>
+        </div>
+        <div class="banner">
+            <a href="Sistema de contratacion/Modulos SDC.html" style="text-decoration: none; color: inherit;" Name="Sistema_de_contratacion" class="banner-link"Ir a pagina>
+            <h1 class="madimi-one-regular">CONTRATACIÓN</h1>
+            
+                <img src="Logos/Sistema de contratación logo.png" alt="Logo Contratación" style="max-width: 120px;">
+            </a>
+        </div>
+        <div class="banner">
+            <a href="" style="text-decoration: none; color: inherit;" alt=modulo name="Orfeo" class="banner-link"Ir a pagina>
+            <h1 class="madimi-one-regular">ORFEO</h1>
+            
+                <img src="Logos/orfeo.png" alt="Logo Orfeo" class="logos" >
+            </a>
+        </div>
+       
+</div>
+
+    <footer class="footer-banner">  
+        <div class="footer-logo-container">
+            <img src="Logos/Mesa de trabajo 1.png" alt="" class="footer-image">
+            </div>       
+        <div class="footer-content">
+        
+          <h3 class="madimi-one-regular">Contactanos</h3>
+          <p class="madimi-one-regular">Correo: contacto@ejemplo.com | Teléfono: +123 456 7890</p>
+          <div class="social-icons">
+            <a href="#" class="madimi-one-regular">Facebook</a>
+            <a href="#" class="madimi-one-regular">Twitter</a>
+            <a href="#" class="madimi-one-regular">Instagram</a>
+            <p class="madimi-one-regular">© 2025 IDARTES</p>
+            
+          </div>
+        </div>
+        
+    </footer>
+</body>
+
+
+</html>
