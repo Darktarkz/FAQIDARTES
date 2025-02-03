@@ -6,35 +6,34 @@
             background-color: #eef1f5;
             align-items: center;
             height: 100vh;
-            
-            
         }
 
         .roboto-flex {
-        font-family: "Roboto Flex", serif;
-        font-optical-sizing: auto;
-        font-weight: 500;
-        font-style: normal;
-        font-variation-settings:
-            "slnt" 0,
-            "wdth" 100,
-            "GRAD" 0,
-            "XOPQ" 96,
-            "XTRA" 468,
-            "YOPQ" 79,
-            "YTAS" 750,
-            "YTDE" -203,
-            "YTFI" 738,
-            "YTLC" 514,
-            "YTUC" 712;
+            font-family: "Roboto Flex", serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+            font-variation-settings:
+                "slnt" 0,
+                "wdth" 100,
+                "GRAD" 0,
+                "XOPQ" 96,
+                "XTRA" 468,
+                "YOPQ" 79,
+                "YTAS" 750,
+                "YTDE" -203,
+                "YTFI" 738,
+                "YTLC" 514,
+                "YTUC" 712;
         }
+
         .madimi-one-regular {
             font-family: "Madimi One", serif;
             font-weight: 400;
             font-style: normal;
         }
 
-        .head{
+        .head {
             height: 100px;
             display: flex;
             max-width: 100%;
@@ -43,13 +42,10 @@
             align-items: center;
             justify-content: center;
             color: #fff;
-            
-
-
         }
 
         .banner-container {
-            max-width:  100%;
+            max-width: 100%;
             height: 750px;
             display: flex;
             flex-wrap: wrap; /* Permite que los banners se ajusten a nuevas filas */
@@ -60,7 +56,6 @@
         }
 
         .banner {
-
             font-size: small;
             width: 180px;
             height: 180px;
@@ -75,9 +70,9 @@
             padding: 10px; /* Espaciado interno */
             transition: transform 0.3s ease;
             text-decoration: none;
-            
         }
-        .banner-link{
+
+        .banner-link {
             width: 180px;
             height: 180px;
             z-index: 1;
@@ -88,9 +83,9 @@
             height: auto;
             margin-top: 10px; /* Espaciado entre el texto y la imagen */
             object-fit: cover;
-            
         }
-        .banner:hover{
+
+        .banner:hover {
             transform: scale(1.2);
         }
 
@@ -107,50 +102,43 @@
             }
         }
 
-
-        /* Estilo general del pie de página */
         .footer-banner {
-        position: relative;
-        height: 100px;
-        background: black;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        position:fixed;
-        width: 100%; /* Asegura que ocupe todo el ancho de la ventana */
-        box-sizing: border-box;
-        padding: 0%; /* Espaciado interno */
-        z-index: 998;
-        
+            position: relative;
+            height: 100px;
+            background: black;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%; /* Asegura que ocupe todo el ancho de la ventana */
+            box-sizing: border-box;
+            padding: 0%; /* Espaciado interno */
+            z-index: 998;
         }
 
-        /* Contenido dentro del pie de página */
         .footer-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        color: whitesmoke;
-        flex-wrap: wrap;
-        line-height: 1.0;
-        text-align: center;
-        
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            color: whitesmoke;
+            flex-wrap: wrap;
+            line-height: 1.0;
+            text-align: center;
         }
 
-
-        /* Títulos y texto */
         .footer-content h3 {
-        font-size: large;
-        margin: 5px 0;
+            font-size: large;
+            margin: 5px 0;
         }
 
         .footer-content p {
-        float: center;
-        font-size: 0.9rem;
-        margin: 3px 0;
-        line-height: 1.0;
-
+            float: center;
+            font-size: 0.9rem;
+            margin: 3px 0;
+            line-height: 1.0;
         }
-        .footer-logo-container{
+
+        .footer-logo-container {
             position: absolute;
             max-height: auto;
             max-width: 300px;
@@ -160,48 +148,66 @@
             display: flex;
             z-index: 999;
         }
-        .footer-image{
+
+        .footer-image {
             float: right;
             width: 100%;
             height: auto;
-
         }
 
-        .footer-content a{
+        .footer-content a {
             font-size: small;
             margin-bottom: 1px;
-
-
         }
 
-        /* Estilo de íconos o enlaces sociales */
         .social-icons a {
-        color: #fff; /* Color de los enlaces */
-        text-decoration: none; /* Quita subrayado */
-        margin: 0 5px; /* Espaciado entre íconos */
-        font-size: 0.9rem; /* Tamaño del texto */
-        transition: color 0.3s ease; /* Efecto de transición */
-        line-height: 1;
+            color: #fff; /* Color de los enlaces */
+            text-decoration: none; /* Quita subrayado */
+            margin: 0 5px; /* Espaciado entre íconos */
+            font-size: 0.9rem; /* Tamaño del texto */
+            transition: color 0.3s ease; /* Efecto de transición */
+            line-height: 1;
         }
 
         .social-icons a:hover {
-        color: #1e90ff; /* Cambia de color al pasar el cursor */
+            color: #1e90ff; /* Cambia de color al pasar el cursor */
         }
 
-            /* Estilo responsivo */
-            @media (max-width: 768px) {
-        .footer-content h3 {
-            font-size: 1.2rem;
+        /* Estilo responsivo */
+        @media (max-width: 768px) {
+            .footer-content h3 {
+                font-size: 1.2rem;
+            }
+
+            .footer-content p {
+                font-size: 0.9rem;
+            }
+
+            .social-icons a {
+                font-size: 1rem;
+                margin: 0 5px;
+            }
+
+            .footer-logo-container {
+                right: 10px; /* Ajusta la posición en pantallas pequeñas */
+            }
         }
 
-        .footer-content p {
-            font-size: 0.9rem;
+        @media (max-width: 480px) {
+            .banner {
+                width: 120px;
+                height: 120px; /* Reduce aún más el tamaño de los banners en pantallas muy pequeñas */
+            }
+
+            .footer-content h3 {
+                font-size: 1rem;
+            }
+
+            .footer-content p {
+                font-size: 0.8rem;
+            }
+
+            .social-icons a {
+                font-size: 0.8rem;
+            }
         }
-
-        .social-icons a {
-            font-size: 1rem;
-            margin: 0 5px;
-        }
-    }
-
-
