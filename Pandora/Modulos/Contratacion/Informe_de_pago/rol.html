@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulo Contratacion</title>
+    <style>
+        body {
+            overflow-y: hidden;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #eef1f5;
+            align-items: center;
+            height: 100vh;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            
+        }
+        .head{
+            height: 60px;
+            display: flex;
+            max-width: 100%;
+            background-color: #664a93;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            
+
+
+        }
+
+        .banner-container {
+            max-width:  100%;
+            height: 800px;
+            display: flex;
+            flex-wrap: wrap; /* Permite que los banners se ajusten a nuevas filas */
+            justify-content: center; /* Centra horizontalmente los banners */
+            gap: 50px; /* Espaciado entre los banners */
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .banner {
+
+            font-size: small;
+            width: 200px;
+            height: 200px;
+            background-color: whitesmoke;
+            border-radius: 10px;
+            display: flex; /* Flexbox para alinear contenido */
+            flex-direction: column; /* Organiza el contenido en columna */
+            justify-content: center; /* Centra verticalmente el contenido */
+            align-items: center; /* Centra horizontalmente el contenido */
+            box-shadow: 0 10px 16px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 10px; /* Espaciado interno */
+            transition: transform 0.3s ease;
+            font-size: 0.5rem;
+        }
+        .banner-link{
+            width: 200px;
+            height: 200px;
+            z-index: 1;
+        }
+
+        .logos {
+            max-width: 100px; /* Tamaño máximo de la imagen */
+            height: auto;
+            margin-top: 10px; /* Espaciado entre el texto y la imagen */
+            object-fit: cover;
+            
+        }
+        .banner:hover{
+            transform: scale(1.2);
+        }
+
+        
+
+        
+        
+
+         /* Estilo general del pie de página */
+         .footer-banner {
+        position: relative;
+        height: 100px;
+        background: black;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        position:fixed;
+        width: 100%; /* Asegura que ocupe todo el ancho de la ventana */
+        box-sizing: border-box;
+        padding: 0%; /* Espaciado interno */
+        z-index: 998;
+        
+        }
+
+        /* Contenido dentro del pie de página */
+        .footer-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        color: whitesmoke;
+        flex-wrap: wrap;
+        line-height: 1.0;
+        text-align: center;
+        
+        }
+
+
+        /* Títulos y texto */
+        .footer-content h3 {
+        font-size: large;
+        margin: 5px 0;
+        }
+
+        .footer-content p {
+        float: center;
+        font-size: 0.9rem;
+        margin: 3px 0;
+        line-height: 1.0;
+
+        }
+        .footer-logo-container{
+            position: absolute;
+            max-height: auto;
+            max-width: 300px;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            display: flex;
+            z-index: 999;
+        }
+        .footer-image{
+            float: right;
+            width: 100%;
+            height: auto;
+
+        }
+
+        .footer-content a{
+            font-size: small;
+            margin-bottom: 1px;
+
+
+        }
+
+        /* Estilo de íconos o enlaces sociales */
+        .social-icons a {
+        color: #fff; /* Color de los enlaces */
+        text-decoration: none; /* Quita subrayado */
+        margin: 0 5px; /* Espaciado entre íconos */
+        font-size: 0.9rem; /* Tamaño del texto */
+        transition: color 0.3s ease; /* Efecto de transición */
+        line-height: 1;
+        }
+
+        .social-icons a:hover {
+        color: #1e90ff; /* Cambia de color al pasar el cursor */
+        }
+
+            /* Estilo responsivo */
+            @media (max-width: 768px) {
+        .footer-content h3 {
+            font-size: 1.2rem;
+        }
+
+        .footer-content p {
+            font-size: 0.9rem;
+        }
+
+        .social-icons a {
+            font-size: 1rem;
+            margin: 0 5px;
+        }
+    }
+
+    </style>
+    </head>
+<body>
+    <div class="body">
+        <div class="head"></div>
+            <div class="banner-container">
+        
+            <div class="banner">
+                <a href="Contratista/FAQ_Contratista.html" style="text-decoration: none; color: inherit;" class="banner-link">
+                <h1>¿Eres contratista?</h1>
+                    
+                    <img src="G:\Unidades compartidas\FAQ IDARTES\Pandora\Modulos\iconos\usuario.png" alt="Contratación" class="logos">
+                     </a>
+            </div>
+            <div class="banner">
+                <a href="" style="text-decoration: none; color: inherit;" class="banner-link">
+                <h1>¿Eres apoyo a la supervisión o supervisor?</h1>
+                    
+                    <img src="G:\Unidades compartidas\FAQ IDARTES\Pandora\Modulos\iconos\usuarioapoyo.png" alt="Control Interno" class="logos">
+                     </a>
+            </div>
+
+             </div>
+    </div>
+</div>
+
+<footer class="footer-banner">  
+    <div class="footer-logo-container">
+        <img src="Logos/Mesa de trabajo 1.png" alt="" class="footer-image">
+        </div>       
+    <div class="footer-content">
+    
+      <h3>Contactanos</h3>
+      <p>Correo: contacto@ejemplo.com | Teléfono: +123 456 7890</p>
+      <div class="social-icons">
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+        <p>© 2025 IDARTES</p>
+        
+      </div>
+    </div>
+    
+</footer>
+</body>
+</html>
