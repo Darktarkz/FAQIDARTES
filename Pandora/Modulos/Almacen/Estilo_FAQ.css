@@ -17,8 +17,7 @@ body {
 /* Estilo del banner */
 .faq-banner {
   height: 60px;
-  display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   background: #664a93;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -45,15 +44,20 @@ body {
 }
 
 .faq-logoidartes {
-
+  height: auto;
   width: 100px;
-
+  object-fit: cover;
+  cursor: pointer;
+  float: left;
 }
 
 .faq-logocomunicarte {
-  
+  margin-top: 10px;
+  height: auto;
   max-width: 200px;
-
+  float: right;
+  cursor: pointer;
+  object-fit: cover;
 }
 .button {
   background-color: #664a93;
@@ -203,6 +207,24 @@ body {
 
 /* Estilo responsivo */
 @media (max-width: 768px) {
+  .faq-banner2,
+  .faq-container {
+    width: 90%;
+  }
+
+  .faq-logoidartes,
+  .faq-logocomunicarte {
+    width: 80px;
+  }
+
+  .button {
+    max-width: 80px;
+  }
+
+  .faq-image {
+    max-width: 100%;
+  }
+
   .footer-content h3 {
     font-size: 1.2rem;
   }
@@ -214,5 +236,34 @@ body {
   .social-icons a {
     font-size: 1rem;
     margin: 0 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-banner2,
+  .faq-container {
+    width: 100%;
+  }
+
+  .faq-logoidartes,
+  .faq-logocomunicarte {
+    width: 60px;
+  }
+
+  .button {
+    max-width: 60px;
+  }
+
+  .footer-content h3 {
+    font-size: 1rem;
+  }
+
+  .footer-content p {
+    font-size: 0.8rem;
+  }
+
+  .social-icons a {
+    font-size: 0.8rem;
+    margin: 0 3px;
   }
 }
