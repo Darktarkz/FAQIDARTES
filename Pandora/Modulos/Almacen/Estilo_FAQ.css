@@ -5,6 +5,7 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
+
 }
 body {
   font-family: Arial, sans-serif;
@@ -136,6 +137,9 @@ body {
 }
 /* Estilo general del pie de página */
 .footer-banner {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   height: 100px;
   background: black;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -144,17 +148,17 @@ body {
   padding: 1px 1px;
   z-index: 998;
   position: relative;
-  display:flex;
    /* Distribuye el espacio entre los elementos */
   align-items: center;
-  flex-shrink: 0; /* Evita que el pie de página se reduzca o colapse */
+   /* Evita que el pie de página se reduzca o colapse */
 }
 
 /* Contenido dentro del pie de página */
 .footer-content {
   display: flex;
+  grid-area: 3 / 2 / 4 / 3;
   flex-direction: column;
-  justify-content: justify-evenly;
+  justify-content: space-around;
   width: 100%;
   color: whitesmoke;
   flex-wrap: wrap;
@@ -175,11 +179,10 @@ body {
   line-height: 1;
 }
 .footer-logo-container {
-  justify-content: end;
-  max-width: 300px;
-  display: flex;
-  z-index: 999;
-  
+  grid-area: 3 / 3 / 4 / 4;
+  width: 300px;
+ align-self: stretch;
+ justify-self: end;
 }
 .footer-image {
   width: 100%;
