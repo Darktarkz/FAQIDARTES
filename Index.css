@@ -1,5 +1,4 @@
         body {
-            overflow-y: hidden;
             line-height: 1.6;
             margin: 0;
             padding: 0;
@@ -45,8 +44,8 @@
         }
 
         .banner-container {
+            height: 755px;
             max-width: 100%;
-            height: 750px;
             display: flex;
             flex-wrap: wrap; /* Permite que los banners se ajusten a nuevas filas */
             justify-content: center; /* Centra horizontalmente los banners */
@@ -56,7 +55,7 @@
         }
 
         .banner {
-            font-size: small;
+            font-size: 50%;
             width: 180px;
             height: 180px;
             background-color: #ebf5fb;
@@ -70,6 +69,7 @@
             padding: 10px; /* Espaciado interno */
             transition: transform 0.3s ease;
             text-decoration: none;
+
         }
 
         .banner-link {
@@ -79,7 +79,7 @@
         }
 
         .logos {
-            max-width: 100px; /* Tamaño máximo de la imagen */
+            max-width: 120px; /* Tamaño máximo de la imagen */
             height: auto;
             margin-top: 10px; /* Espaciado entre el texto y la imagen */
             object-fit: cover;
@@ -89,77 +89,67 @@
             transform: scale(1.2);
         }
 
-        /* Diseño responsivo */
-        @media (max-width: 768px) {
-            .banner-container {
-                max-width: 100%;
-                gap: 10px; /* Reduce el espacio entre banners en pantallas pequeñas */
-            }
-
-            .banner {
-                width: 150px;
-                height: 150px; /* Reduce el tamaño de los banners en pantallas pequeñas */
-            }
-        }
+        
 
         .footer-banner {
-            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
             height: 100px;
             background: black;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            width: 100%; /* Asegura que ocupe todo el ancho de la ventana */
+            box-shadow: 5px 2px 0px rgba(0, 0, 0, 0.1);
+            width: 100%;
             box-sizing: border-box;
-            padding: 0%; /* Espaciado interno */
             z-index: 998;
+            position: relative;
+            /* Distribuye el espacio entre los elementos */
+            align-items: center;
+            /* Evita que el pie de página se reduzca o colapse */
         }
 
+                /* Contenido dentro del pie de página */
         .footer-content {
             display: flex;
+            grid-area: 3 / 2 / 4 / 3;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            justify-content: space-around;
             width: 100%;
             color: whitesmoke;
             flex-wrap: wrap;
-            line-height: 1.0;
+            line-height: 1;
             text-align: center;
+            
         }
-
+        
+        /* Títulos y texto */
         .footer-content h3 {
             font-size: large;
             margin: 5px 0;
         }
-
+        
         .footer-content p {
-            float: center;
+            text-align: center;
             font-size: 0.9rem;
             margin: 3px 0;
-            line-height: 1.0;
+            line-height: 1;
         }
-
         .footer-logo-container {
-            position: absolute;
-            max-height: auto;
-            max-width: 300px;
-            top: 50%;
-            right: 20px;
-            transform: translateY(-50%);
-            display: flex;
-            z-index: 999;
+            grid-area: 3 / 3 / 4 / 4;
+            width: 300px;
+        align-self: stretch;
+        justify-self: end;
         }
-
         .footer-image {
-            float: right;
             width: 100%;
             height: auto;
         }
-
+        
         .footer-content a {
             font-size: small;
             margin-bottom: 1px;
         }
-
+        
+        /* Estilo de íconos o enlaces sociales */
         .social-icons a {
             color: #fff; /* Color de los enlaces */
             text-decoration: none; /* Quita subrayado */
@@ -168,35 +158,56 @@
             transition: color 0.3s ease; /* Efecto de transición */
             line-height: 1;
         }
-
+        
         .social-icons a:hover {
             color: #1e90ff; /* Cambia de color al pasar el cursor */
         }
 
         /* Estilo responsivo */
         @media (max-width: 768px) {
-            .footer-content h3 {
-                font-size: 1.2rem;
-            }
 
-            .footer-content p {
+
+            .banner{
+                padding: 5px;
+                margin: 2PX 0;                
+                width: 120px;
+                height: 120px;
+                font-size: 0.4rem;
+                gap: 10px;
+                
+                
+            }
+            .logos{
+                width: 80px;
+                object-fit: contain;
+                margin-top: 1px;
+            }
+            
+
+
+            .footer-content h3 {
                 font-size: 0.9rem;
             }
 
+            .footer-content p {
+                font-size: 0.7rem;
+            }
+
             .social-icons a {
-                font-size: 1rem;
+                font-size: 0.7rem;
                 margin: 0 5px;
             }
 
             .footer-logo-container {
                 right: 10px; /* Ajusta la posición en pantallas pequeñas */
+                width: 100%;
             }
         }
 
         @media (max-width: 480px) {
             .banner {
-                width: 120px;
-                height: 120px; /* Reduce aún más el tamaño de los banners en pantallas muy pequeñas */
+                width: 100px;
+                height: 100px; /* Reduce aún más el tamaño de los banners en pantallas muy pequeñas */
             }
 
             .footer-content h3 {
@@ -211,3 +222,4 @@
                 font-size: 0.8rem;
             }
         }
+

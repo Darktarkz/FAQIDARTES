@@ -131,11 +131,7 @@ body {
 .faq-image:active {
   transform: scale(1.5);
 }
-.footer-head {
-  height: 100%;
-  max-height: max-content;
-  background: white;
-}
+
 /* Estilo general del pie de página */
 .footer-banner {
   display: grid;
