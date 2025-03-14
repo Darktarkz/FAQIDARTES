@@ -2,7 +2,7 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #eef1f5;
+            background-color: white;
             align-items: center;
             height: 100vh;
         }
@@ -51,29 +51,34 @@
             justify-content: center; /* Centra horizontalmente los banners */
             gap: 50px; /* Espaciado entre los banners */
             align-items: center;
-            cursor: pointer;
+            
         }
 
         .banner {
             font-size: 50%;
-            width: 180px;
+            width: 250px;
             height: 180px;
-            background-color: #ebf5fb;
-            border-radius: 50px;
+            background-color: #d2eeff;
+            border-radius: 30px;
             display: flex; /* Flexbox para alinear contenido */
             flex-direction: column; /* Organiza el contenido en columna */
             justify-content: center; /* Centra verticalmente el contenido */
             align-items: center; /* Centra horizontalmente el contenido */
-            box-shadow: 0 10px 16px rgba(0, 0, 0, 0.1);
+            box-shadow: 10px 20px 10px rgba(0, 0, 0, 0.1);
             text-align: center;
             padding: 10px; /* Espaciado interno */
-            transition: transform 0.3s ease;
+            -webkit-transition: transform 0.3s ease-in-out; /* Efecto de transición */
+            transition: transform 0.3s ease-in-out; /* Efecto de transición estándar */
             text-decoration: none;
+            border-color: black;
+            border-style: solid;
+            border-width: 0.2px;
+
 
         }
 
         .banner-link {
-            width: 180px;
+            width: 250px;
             height: 180px;
             z-index: 1;
         }
@@ -83,12 +88,16 @@
             height: auto;
             margin-top: 10px; /* Espaciado entre el texto y la imagen */
             object-fit: cover;
+            transition: transform 0.3s ease-in-out; /* Efecto de transición */
         }
 
         .banner:hover {
-            transform: scale(1.2);
+            transform: matrix(1.1, 0, 0, 1.1, 0, 0); /* Efecto de escala al pasar el cursor */
         }
-
+        .banner h1 {
+            font-size: 1.5rem;
+            margin: 5px 0;
+        }
         
 
         .footer-banner {
