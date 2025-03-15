@@ -9,10 +9,10 @@
         }
 
         .head {
-            height: 100px;
-            display: flex;
+            height: 90px;
+            display: flex; /* Flexbox para alinear contenido */
             max-width: 100%;
-            background: linear-gradient(to bottom right, black, rgb(100, 0, 131));
+            background: linear-gradient(to bottom right, black, rgb(100, 0, 131)); /* Degradado de colores */
             text-align: center;
             align-items: center;
             justify-content: center;
@@ -27,7 +27,7 @@
             justify-content: center; /* Centra horizontalmente los banners */
             gap: 50px; /* Espaciado entre los banners */
             align-items: center; /* Centra verticalmente los banners */
-            background-color: white; /* Color de fondo */
+            background-color: whitesmoke; /* Color de fondo */  
             
         }
         
@@ -42,7 +42,6 @@
             max-width: 120px; /* Tamaño máximo de la imagen */
             max-height: 120px; /* Altura de la imagen */
             margin-top: 10px; /* Espaciado entre el texto y la imagen */
-           
         }
 
      

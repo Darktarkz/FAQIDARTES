@@ -58,7 +58,7 @@
   }
   
   .flip-card-back {
-    background: linear-gradient(to bottom right, pink);
+    background: linear-gradient(to bottom right, rgb(100, 0, 131), black);
     color: white;
     transform: rotateY(180deg);
   }

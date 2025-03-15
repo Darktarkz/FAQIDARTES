@@ -7,21 +7,18 @@ body {
     background-color: white;
     align-items: center;
     height: 100vh;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     
 }
 .head{
-    height: 60px;
+    height: 90px;
     display: flex;
     max-width: 100%;
-    background-color: #664a93;
+    background: linear-gradient(to bottom right, black, rgb(100, 0, 131));
     text-align: center;
     align-items: center;
     justify-content: center;
     color: #fff;
-    
-
-
 }
 
 .banner-container {
@@ -36,11 +33,10 @@ body {
 }
 
 .banner {
-
     font-size: small;
     width: 200px;
     height: 200px;
-    background-color: #d2eeff;
+    background: linear-gradient(to bottom right, black, rgb(100, 0, 131));
     border-radius: 30px;
     display: flex; /* Flexbox para alinear contenido */
     flex-direction: column; /* Organiza el contenido en columna */
@@ -53,6 +49,7 @@ body {
     font-size: 0.5rem;
     border-style: solid;
     border-width: 0.2px;
+    color: white;
 }
 .banner-link{
     width: 200px;
@@ -62,9 +59,10 @@ body {
 
 .logos {
     max-width: 100px; /* Tamaño máximo de la imagen */
-    height: auto;
+    height: auto; /* Altura automática */
     margin-top: 10px; /* Espaciado entre el texto y la imagen */
-    object-fit: cover;
+    object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
+    filter: invert(1); /* Invierte los colores de la imagen */
     
 }
 .banner:hover{
