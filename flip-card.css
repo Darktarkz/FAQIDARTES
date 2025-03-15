@@ -62,3 +62,42 @@
     color: white;
     transform: rotateY(180deg);
   }
+  @media only screen and (max-width: 600px) {
+    .flip-card {
+      width: 150px;
+      height: 200px;
+    }
+
+    .flip-card-front h1 {
+      font-size: 1.2em;
+      margin-top: 80px;
+    }
+
+    .title {
+      font-size: 1.2em;
+    }
+
+    .flip-card-inner {
+      font-size: 0.6rem;
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    .flip-card {
+      width: 120px;
+      height: 160px;
+    }
+
+    .flip-card-front h1 {
+      font-size: 1em;
+      margin-top: 60px;
+    }
+
+    .title {
+      font-size: 1em;
+    }
+
+    .flip-card-inner {
+      font-size: 0.5rem;
+    }
+  }
