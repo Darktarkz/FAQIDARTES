@@ -5,99 +5,47 @@
             background-color: white;
             align-items: center;
             height: 100vh;
-        }
-
-        .roboto-flex {
-            font-family: "Roboto Flex", serif;
-            font-optical-sizing: auto;
-            font-weight: 500;
-            font-style: normal;
-            font-variation-settings:
-                "slnt" 0,
-                "wdth" 100,
-                "GRAD" 0,
-                "XOPQ" 96,
-                "XTRA" 468,
-                "YOPQ" 79,
-                "YTAS" 750,
-                "YTDE" -203,
-                "YTFI" 738,
-                "YTLC" 514,
-                "YTUC" 712;
-        }
-
-        .madimi-one-regular {
-            font-family: "Madimi One", serif;
-            font-weight: 400;
-            font-style: normal;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
 
         .head {
             height: 100px;
             display: flex;
             max-width: 100%;
-            background-color: #664a93;
+            background: linear-gradient(to bottom right, black, rgb(100, 0, 131));
             text-align: center;
             align-items: center;
             justify-content: center;
-            color: #fff;
+            color: white;  
         }
 
         .banner-container {
-            height: 755px;
-            max-width: 100%;
-            display: flex;
+            height: 755px; /* Altura del contenedor */
+            max-width: 100%; /* Tamaño máximo del contenedor */
+            display: flex; /* Permite que los banners se ajusten a nuevas filas */
             flex-wrap: wrap; /* Permite que los banners se ajusten a nuevas filas */
             justify-content: center; /* Centra horizontalmente los banners */
             gap: 50px; /* Espaciado entre los banners */
-            align-items: center;
+            align-items: center; /* Centra verticalmente los banners */
+            background-color: white; /* Color de fondo */
             
         }
-
-        .banner {
-            font-size: 50%;
-            width: 250px;
-            height: 180px;
-            background-color: #d2eeff;
-            border-radius: 30px;
-            display: flex; /* Flexbox para alinear contenido */
-            flex-direction: column; /* Organiza el contenido en columna */
-            justify-content: center; /* Centra verticalmente el contenido */
-            align-items: center; /* Centra horizontalmente el contenido */
-            box-shadow: 10px 20px 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            padding: 10px; /* Espaciado interno */
-            -webkit-transition: transform 0.3s ease-in-out; /* Efecto de transición */
-            transition: transform 0.3s ease-in-out; /* Efecto de transición estándar */
-            text-decoration: none;
-            border-color: black;
-            border-style: solid;
-            border-width: 0.2px;
-
-
-        }
-
+        
         .banner-link {
-            width: 250px;
-            height: 180px;
+            width: 190px;
+            height: 254px;
             z-index: 1;
         }
 
         .logos {
+            align-self: center;
             max-width: 120px; /* Tamaño máximo de la imagen */
-            height: auto;
+            max-height: 120px; /* Altura de la imagen */
             margin-top: 10px; /* Espaciado entre el texto y la imagen */
-            object-fit: cover;
-            transition: transform 0.3s ease-in-out; /* Efecto de transición */
+           
         }
 
-        .banner:hover {
-            transform: matrix(1.1, 0, 0, 1.1, 0, 0); /* Efecto de escala al pasar el cursor */
-        }
-        .banner h1 {
-            font-size: 1.5rem;
-            margin: 5px 0;
-        }
+     
         
 
         .footer-banner {
