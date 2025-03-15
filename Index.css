@@ -122,6 +122,11 @@
         /* Estilo responsivo */
         @media (max-width: 768px) {
 
+            .head {
+                height: 60px;
+                font-size: 0.8rem;
+            }	
+
 
             .banner{
                 padding: 5px;
