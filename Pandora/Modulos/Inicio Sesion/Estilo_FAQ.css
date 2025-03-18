@@ -10,7 +10,7 @@ body {
 body {
   font-family: Arial, sans-serif;
   line-height: 1;
-  background-color: whitesmoke; /* Fondo fijo */
+  background-color: gainsboro; /* Fondo fijo */
   color: #333;
   flex: 1; /* Permite que el contenido principal se expanda */
 }
@@ -20,8 +20,7 @@ body {
   height: 60px;
   justify-content: center;
   align-items: center;
-  background: #664a93;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to bottom right, black, rgb(100, 0, 131));
   position: relative;
   width: 100%;
   top: 0;

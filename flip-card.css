@@ -22,7 +22,6 @@
     transition: transform 0.8s;
     transform-style: preserve-3d;
     font-size: 0.75rem;
-    text-align: center;
     
   }
   .flip-card-front h1 {
@@ -38,7 +37,7 @@
   }
   
   .flip-card-front, .flip-card-back {
-    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 20px 8px 0 rgba(0,0,0,0.2);
     position: absolute;
     display: flex;
     text-align: center;
@@ -47,7 +46,6 @@
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    border: 1px solid black;
     border-radius: 1rem;
     
   }

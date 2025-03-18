@@ -27,7 +27,7 @@
             justify-content: center; /* Centra horizontalmente los banners */
             gap: 50px; /* Espaciado entre los banners */
             align-items: center; /* Centra verticalmente los banners */
-            background-color: whitesmoke; /* Color de fondo */  
+            background-color: gainsboro; /* Color de fondo */  
             
         }
         
@@ -92,8 +92,8 @@
         .footer-logo-container {
             grid-area: 3 / 3 / 4 / 4;
             width: 300px;
-        align-self: stretch;
-        justify-self: end;
+            align-self: stretch;
+            justify-self: end;
         }
         .footer-image {
             width: 100%;
@@ -119,68 +119,44 @@
             color: #1e90ff; /* Cambia de color al pasar el cursor */
         }
 
-        /* Estilo responsivo */
         @media (max-width: 768px) {
 
             .head {
                 height: 60px;
                 font-size: 0.5rem;
-            }	
-
-
+            }	 
             .banner{
-                padding: 5px;
-                margin: 2PX 0;                
-                width: 120px;
-                height: 120px;
-                font-size: 0.4rem;
-                gap: 10px;
-                
-                
+                width: 150px;
+                height: 150px;
             }
-            .logos{
-                width: 80px;
-                object-fit: contain;
-                margin-top: 1px;
+            .banner-container{
+                height: 600px;
+            }
+            .banner h1 {
+                font-size: 0.8rem;
+            }
+            .logos {
+                max-width: 80px;
+                height: 80px;
+            }
+            .footer-content h1 {
+                font-size: 0.8rem;
             }
             
-
-
             .footer-content h3 {
-                font-size: 0.9rem;
+                font-size: 0.8rem;
             }
-
+            
             .footer-content p {
-                font-size: 0.7rem;
+                font-size: 0.6rem;
             }
-
+            
+            .footer-image{
+                max-width: 80px;
+            }
             .social-icons a {
-                font-size: 0.7rem;
+                font-size: 0.8rem;
                 margin: 0 5px;
             }
-
-            .footer-logo-container {
-                right: 10px; /* Ajusta la posición en pantallas pequeñas */
-                width: 100%;
-            }
         }
-
-        @media (max-width: 480px) {
-            .banner {
-                width: 100px;
-                height: 100px; /* Reduce aún más el tamaño de los banners en pantallas muy pequeñas */
-            }
-
-            .footer-content h3 {
-                font-size: 1rem;
-            }
-
-            .footer-content p {
-                font-size: 0.8rem;
-            }
-
-            .social-icons a {
-                font-size: 0.8rem;
-            }
-        }
-
+            
