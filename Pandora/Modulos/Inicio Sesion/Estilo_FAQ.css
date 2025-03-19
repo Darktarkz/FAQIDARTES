@@ -3,20 +3,20 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
+  overflow-x: hidden;
+  
+ 
 
 }
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1;
+  font-family: Arial, sans-serif; /* Tipo de fuente */
+  line-height: 1; /* Espaciado entre líneas */
   background-color: gainsboro; /* Fondo fijo */
-  color: #333;
-  flex: 1; /* Permite que el contenido principal se expanda */
+  color: #333; /* Color de texto */
 }
 
 /* Estilo del banner */
-.logos-container{
+.logos-container {
   background: linear-gradient(to bottom right, black, rgb(100, 0, 131)); /* Degradado de colores */
   max-width: 100%; /* Tamaño máximo del contenedor */
   height: 90px; /* Altura del contenedor */
@@ -49,6 +49,7 @@ body {
   color: white;
   grid-area: 1 / 2 / 2 / 3;
 }
+
 .faq-banner2 {
   height: auto;
   width: 500px;
@@ -65,22 +66,6 @@ body {
   text-align: center;
 }
 
-.faq-logoidartes {
-  height: auto;
-  width: 100px;
-  object-fit: cover;
-  cursor: pointer;
-  float: left;
-}
-
-.faq-logocomunicarte {
-  margin-top: 10px;
-  height: auto;
-  max-width: 200px;
-  float: right;
-  cursor: pointer;
-  object-fit: cover;
-}
 .button {
   background-color: #664a93;
   border-radius: 8px;
@@ -93,29 +78,29 @@ body {
 /* Contenedor de las FAQ */
 
 .faq-container {
-  flex: 1; /* Expande el contenedor para ocupar el espacio restante */
-  height: fit-content;
+  flex: 1; /* Ocupa todo el espacio disponible */
+  max-height: max-content; /* Altura máxima del contenedor */
   width: 1000px;
-  max-height: auto;
-  margin: 20px auto;
-  background: #fff;
-  border-radius: 8px;
-  text-align: center;
-  border-right: 1;
+  margin: 20px auto; /* Margen superior e inferior */
+  background: #fff; /* Fondo blanco */
+  border-radius: 8px; /* Borde redondeado */
+  text-align: center; /* Alineación del texto */
+  border-right: 1; /* Borde derecho */
   
 }
 
 .faq-item {
-  padding: 20px;
-  max-height: max-content;
-  display: grid;
-  align-content: space-around;
-  margin-bottom: 20px;
-  line-height: 1.5;
-  border-bottom: 1px solid #e0e0e0;
-  border-radius: 5px;
-  border-left: 1px solid #e0e0e0;
-  border-right: 1px solid #e0e0e0;
+  padding: 20px; /* Espaciado interno */
+  max-height: max-content; /* Altura máxima del contenedor */
+  display: flex;  /* Distribuye los elementos en una fila */
+  flex-direction: column; /* Alinea los elementos en una columna */
+  align-content: space-around; /* Distribuye el espacio entre los elementos */
+  margin-bottom: 20px; /* Espaciado entre preguntas */
+  line-height: 1.5; /* Espaciado entre líneas */
+  border-bottom: 1px solid #e0e0e0; /* Borde inferior */
+  border-radius: 5px; /* Borde redondeado */
+  border-left: 1px solid #e0e0e0; /* Borde izquierdo */
+  border-right: 1px solid #e0e0e0;  /* Borde derecho */
 }
 
 
@@ -158,6 +143,8 @@ body {
 }
 /* Estilo general del pie de página */
 .footer-banner {
+  margin: 381px 0 0 0;
+  position: fixed;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -230,7 +217,9 @@ body {
 }
 
 /* Estilo responsivo */
+/* Estilo responsivo */
 @media (max-width: 768px) {
+
 
   .title {
       font-size: 0.7rem;
@@ -265,8 +254,25 @@ body {
       width: 80px;
       height: 80px;
   }
+  .faq-banner2 {
+      width: 300px;
+      font-size: 0.5rem;
+  }
+  .faq-container {
+      max-width: 430px;
+  }
+ .faq-question {
+      font-size: 0.7rem;
+  }
+  .faq-answer {
+      font-size: 0.7rem;
+  }
+  .faq-image {
+      max-width: 400px;
+  }
   .footer-banner{
       height: 70px;
+      margin: 295px 0 0 0;
   }
   .footer-content{
       width: 250px;
@@ -286,3 +292,4 @@ body {
       max-width: 180px;
   }
 }
+

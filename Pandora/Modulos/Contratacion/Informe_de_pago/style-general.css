@@ -1,4 +1,4 @@
-
+html,
 body {
     line-height: 1.6;
     margin: 0;
@@ -7,18 +7,9 @@ body {
     align-items: center;
     height: 100vh;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    
+    overflow-x: hidden;
 }
-.head{
-    height: 90px;
-    display: flex;
-    max-width: 100%;
-    background: linear-gradient(to bottom right, black, rgb(100, 0, 131));
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-}
+
 
 .banner-container {
     max-width:  100%; /* Tamaño máximo del contenedor */
@@ -59,6 +50,40 @@ body {
     height: 254px;
     z-index: 1;
 }
+.logos-container {
+    background: linear-gradient(to bottom right, black, rgb(100, 0, 131)); /* Degradado de colores */
+    max-width: 100%; /* Tamaño máximo del contenedor */
+    height: 90px; /* Altura del contenedor */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Distribuye el espacio entre las columnas */
+    grid-template-rows: 1fr 1fr 1fr; /* Distribuye el espacio entre las filas */
+    gap: 10px 10px; /* Espaciado entre las filas y columnas */
+}
+.logo-idartes {
+    max-width: 120px; /* Tamaño máximo de la imagen */
+    max-height: 120px; /* Altura de la imagen */
+    margin-top: 10px; /* Espaciado entre el texto y la imagen */
+    grid-area: 1 / 3 / 2 / 4; /* Posición de la imagen */
+    align-self: center; /* Alinea la imagen al centro */
+    justify-self: right; /* Alinea la imagen a la derecha */
+    margin-right: 20px;
+}
+.logo-comunicarte {
+    max-width: 180px; /* Tamaño máximo de la imagen */
+    max-height: 180px; /* Altura de la imagen */
+    margin-top: 10px; /* Espaciado entre el texto y la imagen */
+    grid-area: 1 / 1 / 2 / 2; /* Posición de la imagen */
+    align-self: center; /* Alinea la imagen al centro */
+    justify-self: left; /* Alinea la imagen a la izquierda */
+    margin-left: 20px;
+}
+.title {
+    align-self: center; /* Alinea el texto al centro */
+    justify-self: center; /* Alinea el texto al centro */
+    color: white;
+    font-size: 1.5rem;
+    grid-area: 1 / 2 / 2 / 3;
+}
 
 .logos {
     max-width: 100px; /* Tamaño máximo de la imagen */
@@ -80,112 +105,131 @@ body {
 
  /* Estilo general del pie de página */
  .footer-banner {
-position: relative;
-height: 100px;
-background: black;
-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-position:fixed;
-width: 100%; /* Asegura que ocupe todo el ancho de la ventana */
-box-sizing: border-box;
-padding: 0%; /* Espaciado interno */
-z-index: 998;
-
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 100px;
+    background: black;
+    box-shadow: 5px 2px 0px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 998;
+    position: relative;
+    /* Distribuye el espacio entre los elementos */
+    align-items: center;
+    /* Evita que el pie de página se reduzca o colapse */
 }
 
-/* Contenido dentro del pie de página */
+        /* Contenido dentro del pie de página */
 .footer-content {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-width: 100%;
-color: whitesmoke;
-flex-wrap: wrap;
-line-height: 1.0;
-text-align: center;
-
+    display: flex;
+    grid-area: 3 / 2 / 4 / 3;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    color: whitesmoke;
+    flex-wrap: wrap;
+    line-height: 1;
+    text-align: center;
+    
 }
-
 
 /* Títulos y texto */
 .footer-content h3 {
-font-size: large;
-margin: 5px 0;
+    font-size: large;
+    margin: 5px 0;
 }
 
 .footer-content p {
-float: center;
-font-size: 0.9rem;
-margin: 3px 0;
-line-height: 1.0;
-
+    text-align: center;
+    font-size: 0.9rem;
+    margin: 3px 0;
+    line-height: 1;
 }
-.footer-logo-container{
-    position: absolute;
-    max-height: auto;
-    max-width: 300px;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    display: flex;
-    z-index: 999;
+.footer-logo-container {
+    grid-area: 3 / 3 / 4 / 4;
+    width: 300px;
+    align-self: stretch;
+    justify-self: end;
 }
-.footer-image{
-    float: right;
+.footer-image {
     width: 100%;
     height: auto;
-
 }
 
-.footer-content a{
+.footer-content a {
     font-size: small;
     margin-bottom: 1px;
-
-
 }
 
 /* Estilo de íconos o enlaces sociales */
 .social-icons a {
-color: #fff; /* Color de los enlaces */
-text-decoration: none; /* Quita subrayado */
-margin: 0 5px; /* Espaciado entre íconos */
-font-size: 0.9rem; /* Tamaño del texto */
-transition: color 0.3s ease; /* Efecto de transición */
-line-height: 1;
+    color: #fff; /* Color de los enlaces */
+    text-decoration: none; /* Quita subrayado */
+    margin: 0 5px; /* Espaciado entre íconos */
+    font-size: 0.9rem; /* Tamaño del texto */
+    transition: color 0.3s ease; /* Efecto de transición */
+    line-height: 1;
 }
 
 .social-icons a:hover {
-color: #1e90ff; /* Cambia de color al pasar el cursor */
+    color: #1e90ff; /* Cambia de color al pasar el cursor */
 }
 
-    /* Estilo responsivo */
-    @media (max-width: 768px) {
-.head {
-    height: 60px;
-    font-size: 0.5rem;
-}
-.banner {
-    width: 150px;
-    height: 150px;
-}
-.banner-container {
-    height: 600px;
-}
-.footer-content h1 {
-    font-size: 1.2rem;
-}
+@media (max-width: 768px) {
 
-.footer-content h3 {
-    font-size: 1.2rem;
+    .title {
+        font-size: 0.7rem;
+        align-self: center;
+        justify-self: center;
+        width: 150px;
+    }
+    .logos-container {
+        height: 50px;
+        font-size: 0.1rem;
+    }
+    .logo-idartes{
+        max-width: 60px;
+        max-height: 60px;
+    }
+    .logo-comunicarte{
+        max-width: 90px;
+        max-height: 90px;
+    }
+    .banner{
+        width: 150px;
+        height: 150px;
+    }
+    .banner-container{
+        height: 620px;
+        width: 100%;
+    }
+    .banner h1 {
+        font-size: 0.6rem;
+    }
+    .logos {
+        width: 80px;
+        height: 80px;
+    }
+    .footer-banner{
+        height: 70px;
+    }
+    .footer-content{
+        width: 250px;
+    }
+    .footer-content h3 {
+        font-size: 0.8rem;
+    }
+    .footer-content p{
+        font-size: 0.4rem;
+    }
+    
+    .social-icons a {
+        font-size: 0.5rem;
+        margin: 0 5px;
+    }
+    .footer-image{
+        max-width: 180px;
+    }
 }
-
-.footer-content p {
-    font-size: 0.9rem;
-}
-
-.social-icons a {
-    font-size: 1rem;
-    margin: 0 5px;
-}
-}
-
+    
