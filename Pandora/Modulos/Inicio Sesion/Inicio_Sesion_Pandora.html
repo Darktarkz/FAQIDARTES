@@ -27,7 +27,7 @@
 
     <div class="faq-container">
       <div class="faq-item">
-        <p class="faq-question" data-expanded="false">
+        <p class="faq-question" data-expanded="false" name="Pandora_iniciar_sesion">
           1. ¿Cómo ingresar a Pandora?
         </p>
         <p class="faq-answer" hidden>
@@ -67,7 +67,7 @@
           >
           <button
             class="button"
-            onclick="window.location.href='G:/Unidades compartidas/FAQ IDARTES/Formulario/Formulario.html'"
+            onclick="window.location.href='../../../Formulario/Formulario.html'"
           >
             Enviar un ticket
           </button>
@@ -75,7 +75,7 @@
       </div>
 
       <div class="faq-item">
-        <p class="faq-question" data-expanded="false">
+        <p class="faq-question" data-expanded="false" name="Pandora_iniciar_sesion_2">
           2. No puedo iniciar sesión: "Usuario o clave inválida"
         </p>
         <p class="faq-answer" hidden>
@@ -186,6 +186,9 @@
     </footer>
 
     <script>
+      
+      src="../../../scripts/extraername.js";
+
       document.addEventListener("DOMContentLoaded", () => {
         // Selecciona todas las preguntas
         const questions = document.querySelectorAll(".faq-question");

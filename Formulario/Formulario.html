@@ -4,145 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulario</title>
+  <link rel="stylesheet" href="Formulario.css">
   
-  <style>
-    body {
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      height: 100vh;
-      margin: 0;
-      background-color: #f4f4f4;
-    }
-    .head {
-      height: 60px;
-      display: flex;
-      max-width: 100%;
-      background-color: #664a93;
-      text-align: center;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-    }
-    .banner-container {
-      max-width: 100%;
-      height: 800px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 50px;
-      align-items: center;
-    }
-    .form-container {
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      width: 300px;
-    }
-    .form-container h2 {
-      margin-bottom: 20px;
-      font-size: 24px;
-      text-align: center;
-    }
-    .form-container input[type="text"],
-    .form-container input[type="email"],
-    .form-container input[type="number"],
-    .form-container select,
-    .form-container textarea {
-      width: 90%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    .form-container button {
-      width: 100%;
-      padding: 10px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    .form-container button:hover {
-      background-color: #45a049;
-    }
-    .footer-banner {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      height: 100px;
-      background: black;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      box-sizing: border-box;
-      padding: 0;
-      z-index: 998;
-    }
-    .footer-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      color: whitesmoke;
-      flex-wrap: wrap;
-      line-height: 1.0;
-      text-align: center;
-    }
-    .footer-content h3 {
-      font-size: large;
-      margin: 5px 0;
-    }
-    .footer-content p {
-      font-size: 0.9rem;
-      margin: 3px 0;
-      line-height: 1.0;
-    }
-    .footer-logo-container {
-      position: absolute;
-      max-width: 300px;
-      top: 50%;
-      right: 20px;
-      transform: translateY(-50%);
-      display: flex;
-      z-index: 999;
-    }
-    .footer-image {
-      width: 100%;
-      height: auto;
-    }
-    .footer-content a {
-      font-size: small;
-      margin-bottom: 1px;
-    }
-    .social-icons a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 5px;
-      font-size: 0.9rem;
-      transition: color 0.3s ease;
-      line-height: 1;
-    }
-    .social-icons a:hover {
-      color: #1e90ff;
-    }
-    @media (max-width: 768px) {
-      .footer-content h3 {
-        font-size: 1.2rem;
-      }
-      .footer-content p {
-        font-size: 0.9rem;
-      }
-      .social-icons a {
-        font-size: 1rem;
-        margin: 0 5px;
-      }
-    }
-  </style>
+ 
   <link rel="stylesheet" href="styles.css"> <!-- Si tienes un archivo CSS -->
 </head>
 <body>
-  <div class="head">
-    <h1>Formulario</h1>
+  <div class="logos-container">
+    <img
+      src="../assets/Logos/idartes-logo.png"
+      alt="Logo Idartes"
+      class="logo-idartes"
+    />
+    <h1 class="title">Formulario</h1>
+    <img
+      src="../assets/Logos/Logo_Comunicarte_Idartes.png"
+      alt="Logo Comunicarte Idartes"
+      class="logo-comunicarte"
+    />
   </div>
   <div class="banner-container">
     <div class="form-container">
@@ -160,15 +39,21 @@
         <input type="text" name="numero_contrato" placeholder="Número de contrato" required>
         <input type="text" id="plataforma" name="plataforma" placeholder="Plataforma" required>
         <input type="text" id="modulo" name="modulo" placeholder="Módulo" required>
-        <textarea id="pregunta" name="pregunta" placeholder="Pregunta" rows="4" required></textarea>
+        <textarea id="pregunta" name="pregunta" placeholder="Pregunta" rows="4" required style="display: none;"></textarea>
         <textarea name="descripcion" placeholder="Descripción" rows="4" required></textarea>
+        <input type="file" id="error-screenshot" name="error-screenshot" accept="image/*">
+        <div id="image-preview" style="display: none;">
+          <p>Vista previa:</p>
+          <img id="preview-image" src="#" alt="Vista previa" style="width: 350px; height: 350px;">
+        </div>
         <button type="submit">Enviar</button>
       </form>
+      
     </div>
   </div>
   <footer class="footer-banner">
     <div class="footer-logo-container">
-      <img src="G:/Unidades compartidas/FAQ IDARTES/Logos/Mesa de trabajo 1.png" alt="Logo" class="footer-image">
+      <img src="../assets/Logos/Mesa de trabajo 1.png" alt="Logo" class="footer-image">
     </div>
     <div class="footer-content">
       <h3>Contactanos</h3>
@@ -183,3 +68,26 @@
   </footer>
 </body>
 </html>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const fileInput = document.getElementById('error-screenshot');
+    const imagePreview = document.getElementById('image-preview');
+    const previewImage = document.getElementById('preview-image');
+    
+    fileInput.addEventListener('change', function() {
+      if (this.files && this.files[0]) {
+        const reader = new FileReader();
+        
+        reader.onload = function(e) {
+          previewImage.src = e.target.result;
+          imagePreview.style.display = 'block';
+        };
+        
+        reader.readAsDataURL(this.files[0]);
+      } else {
+        imagePreview.style.display = 'none';
+      }
+    });
+  });
+</script>

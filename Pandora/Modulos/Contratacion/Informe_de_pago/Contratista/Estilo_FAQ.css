@@ -198,8 +198,8 @@ body {
 }
 
 .footer-content a {
-  font-size: small;
-  margin-bottom: 1px;
+  font-size: small; /* Tamaño del texto */
+  margin-bottom: 1px; /* Espaciado inferior */
 }
 
 /* Estilo de íconos o enlaces sociales */
