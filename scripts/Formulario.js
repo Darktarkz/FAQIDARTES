@@ -21,36 +21,15 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Función para extraer parámetros de la URL
-  function getURLParameters() {
-    const params = {};
-    const queryString = window.location.search.substring(1);
-    const pairs = queryString.split('&');
-    
-    for (let i = 0; i < pairs.length; i++) {
-      if (pairs[i]) {
-        const pair = pairs[i].split('=');
-        params[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1] || '');
-      }
-    }
-    
-    return params;
-  }
-
-  // Función para rellenar el formulario con los datos recibidos
+  // Función para rellenar el formulario con los datos guardados en localStorage
   function fillFormWithQuestionData() {
-    const params = getURLParameters();
+    // Recuperar datos del localStorage en lugar de la URL
+    const questionName = localStorage.getItem("ticketQuestionName");
     
-    // Si recibimos un nombre de pregunta en la URL
-    if (params.questionName) {
-      // Mostrar el campo pregunta si está oculto
-      const preguntaField = document.getElementById('pregunta');
-      if (preguntaField) {
-        preguntaField.style.display = 'block';
-      }
-      
+    // Si tenemos un nombre de pregunta
+    if (questionName) {
       // Dividir el nombre por el carácter "_"
-      const nameParts = params.questionName.split('_');
+      const nameParts = questionName.split('_');
       
       // Si hay al menos dos partes (plataforma y módulo)
       if (nameParts.length >= 2) {
@@ -63,16 +42,13 @@ document.addEventListener('DOMContentLoaded', function() {
         // Rellenar el campo módulo con la segunda parte
         const moduloField = document.getElementById('modulo');
         if (moduloField) {
-          // Si hay más de dos partes, usamos la segunda parte
-          // Si solo hay dos partes, usamos la segunda
           moduloField.value = nameParts[1];
         }
-        
-        // Rellenar el campo pregunta con el texto de la pregunta (si está disponible)
-        if (params.questionText && preguntaField) {
-          preguntaField.value = params.questionText;
-        }
       }
+      
+      // Limpiar los datos almacenados después de usarlos
+      localStorage.removeItem("ticketQuestionName");
+      localStorage.removeItem("ticketQuestionText");
     }
   }
 
