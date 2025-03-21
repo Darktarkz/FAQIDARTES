@@ -61,10 +61,10 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("ticketQuestionText", questionText);
         
         // Redirigimos al formulario sin parámetros en la URL
-        window.location.href = "../../../Formulario/Formulario.html";
+        window.location.href = "D:/FAQ-IDARTES/FAQIDARTES/Formulario/Formulario.html";
       } else {
         // Redirigimos al formulario simple
-        window.location.href = "../../../Formulario/Formulario.html";
+        window.location.href = "D:/FAQ-IDARTES/FAQIDARTES/Formulario/Formulario.html";
       }
     });
   });
