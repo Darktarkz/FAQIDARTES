@@ -51,12 +51,12 @@
   }
   
   .flip-card-front {
-    background: linear-gradient(to bottom right, black, rgb(100, 0, 131));
+    background: #5a418b;
     color: white;
   }
   
   .flip-card-back {
-    background: linear-gradient(to bottom right, rgb(100, 0, 131), black);
+    background: #5a418b;
     color: white;
     transform: rotateY(180deg);
   }

@@ -25,7 +25,7 @@ body {
 .banner {
     width: 190px;
     height: 254px;
-    background: linear-gradient(to bottom right, black, rgb(100, 0, 131));
+   background: #5a418b;
     display: flex; /* Flexbox para alinear contenido */
     flex-direction: column; /* Alinea el contenido en columnas */
     align-items: center; /* Centra verticalmente el contenido */
@@ -51,7 +51,7 @@ body {
     z-index: 1;
 }
 .logos-container {
-    background: linear-gradient(to bottom right, black, rgb(100, 0, 131)); /* Degradado de colores */
+   background: #5a418b; /* Degradado de colores */
     max-width: 100%; /* Tamaño máximo del contenedor */
     height: 90px; /* Altura del contenedor */
     display: grid;
