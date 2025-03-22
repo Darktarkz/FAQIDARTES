@@ -6,8 +6,7 @@ body {
     background-color: white;
     align-items: center;
     height: 100vh;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    
+    font-family:poppins, sans-serif; /* Tipo de fuente */
 }
 
 
@@ -58,6 +57,7 @@ body {
     grid-template-columns: 1fr 1fr 1fr; /* Distribuye el espacio entre las columnas */
     grid-template-rows: 1fr 1fr 1fr; /* Distribuye el espacio entre las filas */
     gap: 10px 10px; /* Espaciado entre las filas y columnas */
+
 }
 .logo-idartes {
     max-width: 120px; /* Tamaño máximo de la imagen */
@@ -83,6 +83,7 @@ body {
     color: white;
     font-size: 1.5rem;
     grid-area: 1 / 2 / 2 / 3;
+    font-weight: 1000;
 }
 
 .logos {

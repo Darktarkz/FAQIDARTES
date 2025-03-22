@@ -5,8 +5,8 @@
             background-color: white;
             align-items: center;
             height: 100vh;
-            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        }
+            font-family: poppins, sans-serif;
+        }   
 
         
 
@@ -58,8 +58,9 @@
         .title {
             align-self: center; /* Alinea el texto al centro */
             justify-self: center; /* Alinea el texto al centro */
-            color: white;
-            grid-area: 1 / 2 / 2 / 3;
+            color: white; /* Color del texto */
+            grid-area: 1 / 2 / 2 / 3; /* Posición del texto */
+            font-size: 1.5rem; /* Tamaño del texto */
         }
 
         .logos {

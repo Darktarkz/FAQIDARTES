@@ -6,8 +6,7 @@ body {
     background-color: white;
     align-items: center;
     height: 100vh;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    
+    font-family: poppins, sans-serif;
 }
 
 
@@ -39,22 +38,16 @@ body {
     border-radius: 1rem;
 }
 
-.banner h1 {
-    font-weight: 900;
-    text-align: center;
-    text-justify: auto;
-
-}
 .banner-link{
     width: 190px;
     height: 254px;
     z-index: 1;
 }
 .logos-container {
-    background: #5a418b; /* Degradado de colores */
+    background: #5a418b; /* Color de fondo */
     max-width: 100%; /* Tamaño máximo del contenedor */
     height: 90px; /* Altura del contenedor */
-    display: grid;
+    display: grid; /* Grid para distribuir elementos */
     grid-template-columns: 1fr 1fr 1fr; /* Distribuye el espacio entre las columnas */
     grid-template-rows: 1fr 1fr 1fr; /* Distribuye el espacio entre las filas */
     gap: 10px 10px; /* Espaciado entre las filas y columnas */
@@ -66,7 +59,7 @@ body {
     grid-area: 1 / 3 / 2 / 4; /* Posición de la imagen */
     align-self: center; /* Alinea la imagen al centro */
     justify-self: right; /* Alinea la imagen a la derecha */
-    margin-right: 20px;
+    margin-right: 20px; /* Espaciado entre el texto y la imagen */
 }
 .logo-comunicarte {
     max-width: 180px; /* Tamaño máximo de la imagen */
@@ -80,9 +73,10 @@ body {
 .title {
     align-self: center; /* Alinea el texto al centro */
     justify-self: center; /* Alinea el texto al centro */
-    color: white;
-    font-size: 1.5rem;
-    grid-area: 1 / 2 / 2 / 3;
+    color: white; /* Color del texto */
+    grid-area: 1 / 2 / 2 / 3;   /* Posición del texto */
+    font-size: 1.5rem; /* Tamaño del texto */
+    font-weight: 900; /* Grosor del texto */
 }
 
 .logos {

@@ -9,7 +9,7 @@ body {
 
 }
 body {
-  font-family: Arial, sans-serif; /* Tipo de fuente */
+  font-family: poppins, sans-serif; /* Tipo de fuente */
   line-height: 1; /* Espaciado entre líneas */
   background-color: gainsboro; /* Fondo fijo */
   color: #333; /* Color de texto */
@@ -48,12 +48,13 @@ body {
   justify-self: center; /* Alinea el texto al centro */
   color: white;
   grid-area: 1 / 2 / 2 / 3;
+  font-size: 1.5rem;
+  font-weight: 900;
 }
 
 .faq-banner2 {
-  height: auto;
-  width: 500px;
-  max-width: 1000px;
+  height: 50px;
+  width: 1000px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,6 +65,8 @@ body {
   margin: 20px auto;
   border-radius: 10px;
   text-align: center;
+  font-size: 0.8rem;
+  font-weight: 900;
 }
 
 .button {
