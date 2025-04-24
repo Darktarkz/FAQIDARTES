@@ -1,10 +1,9 @@
-
 (function() {
   // Inicializar EmailJS
   emailjs.init("h3s8bfVnJALGAwmS4");
 })();
 
-// Función para convertir imagen a base64
+// Modificar la función convertirImagenABase64 para comprimir la imagen
 function convertirImagenABase64(file, callback) {
   if (!file) {
     callback('');
@@ -13,46 +12,55 @@ function convertirImagenABase64(file, callback) {
   
   const reader = new FileReader();
   reader.onload = function(e) {
-    callback(e.target.result);
+    const img = new Image();
+    img.onload = function() {
+      const canvas = document.createElement('canvas');
+      const ctx = canvas.getContext('2d');
+      
+      // Calcular nuevas dimensiones manteniendo la proporción
+      let width = img.width;
+      let height = img.height;
+      const maxSize = 800; // Tamaño máximo para cualquier dimensión
+      
+      if (width > height && width > maxSize) {
+        height = (height * maxSize) / width;
+        width = maxSize;
+      } else if (height > maxSize) {
+        width = (width * maxSize) / height;
+        height = maxSize;
+      }
+      
+      canvas.width = width;
+      canvas.height = height;
+      
+      // Dibujar imagen redimensionada
+      ctx.drawImage(img, 0, 0, width, height);
+      
+      // Convertir a base64 con calidad reducida
+      const compressedBase64 = canvas.toDataURL('image/jpeg', 0.7);
+      callback(compressedBase64);
+    };
+    img.src = e.target.result;
   };
   reader.readAsDataURL(file);
 }
 
-// Función para mostrar vista previa de la imagen
-function mostrarVistaPreviaImagen(input) {
-  if (input.files && input.files[0]) {
-    const reader = new FileReader();
-    reader.onload = function(e) {
-      document.getElementById('preview-image').src = e.target.result;
-      document.getElementById('image-preview').style.display = 'block';
-    };
-    reader.readAsDataURL(input.files[0]);
-  }
-}
-
-// Función para enviar el formulario
+// Modificar la función enviarFormulario
 function enviarFormulario(e) {
   e.preventDefault();
   
-  // Verificar campos readonly
   const plataforma = document.getElementById('plataforma');
   const modulo = document.getElementById('modulo');
   
-  // Establecer valores por defecto si están vacíos
   if (!plataforma.value) plataforma.value = "No especificada";
   if (!modulo.value) modulo.value = "No especificado";
   
-  // Obtener el archivo
   const file = document.getElementById('error-screenshot').files[0];
-  
-  // Deshabilitar el botón mientras se envía
   const botonEnviar = document.querySelector('button[type="submit"]');
   botonEnviar.disabled = true;
   botonEnviar.textContent = 'Enviando...';
   
-  // Convertir imagen a base64 y enviar
   convertirImagenABase64(file, function(base64Image) {
-    // Crear objeto de parámetros
     const parametros = {
       nombre: document.getElementById('nombre_completo').value,
       tipoid: document.getElementById('tipo_identificacion').value,
@@ -62,10 +70,9 @@ function enviarFormulario(e) {
       plataforma: plataforma.value,
       modulo: modulo.value,
       descripcion: document.getElementById('Descripción').value,
-      screenshot: base64Image || 'No se adjuntó imagen'
+      screenshot: base64Image ? `<img src="${base64Image}" style="max-width: 100%; height: auto;">` : 'No se adjuntó imagen'
     };
     
-    // Enviar correo
     emailjs.send('service_iuk8vcu', 'template_70z6lln', parametros)
       .then(function(response) {
         alert('¡Formulario enviado correctamente!');
