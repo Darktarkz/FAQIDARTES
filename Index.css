@@ -5,8 +5,8 @@
             background-color: white;
             align-items: center;
             height: 100vh;
-            font-family: poppins, sans-serif;
-        }   
+            font-family: 'poppins', sans-serif;
+        }
 
         
 
@@ -36,6 +36,7 @@
             grid-template-columns: 1fr 1fr 1fr; /* Distribuye el espacio entre las columnas */
             grid-template-rows: 1fr 1fr 1fr; /* Distribuye el espacio entre las filas */
             gap: 10px 10px; /* Espaciado entre las filas y columnas */
+            
         }
         .logo-idartes {
             max-width: 120px; /* Tamaño máximo de la imagen */
@@ -70,6 +71,7 @@
             max-width: 150px; /* Tamaño máximo de la imagen */
             height: 150px; /* Altura de la imagen */
             margin-top: 10px; /* Espaciado entre el texto y la imagen */
+            
 
         }
             

@@ -23,17 +23,21 @@
     transform-style: preserve-3d;
     font-size: 0.75rem;
     
+    
   }
   .flip-card-front h1 {
+    display: flex;
+    justify-content: center;
     font-size: 1.5em;
     font-weight: 900;
     text-align: center;
-    text-justify: auto;
+    text-justify: inter-word;
     margin-top: 100px;
   }
   
   .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
+    
   }
   
   .flip-card-front, .flip-card-back {
