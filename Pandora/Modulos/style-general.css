@@ -10,12 +10,13 @@ body {
 .Navbar{
     display: flex;
     justify-content: center;
-    background: gainsboro;
-    padding-top: 30px;
-    width: 100%;
+    background: #dcdcdc;
+    padding: 10px;
+    flex-grow: 1;
+    gap: 15px;
 }
 .navbar-link{
-    width: 50px;
+    width: 60px;
     display: flex;
     flex-direction: column;
     text-decoration: none;
@@ -31,8 +32,8 @@ body {
     width: 30px;
     height: 30px;
     margin: 0 auto;
-}
 
+}
 
 .banner-container {
     height: 755px; /* Altura del contenedor */
