@@ -14,7 +14,32 @@ body {
   background-color: gainsboro; /* Fondo fijo */
   color: #333; /* Color de texto */
 }
+.Navbar{
+  display: flex;
+  justify-content: center;
+  background: #dcdcdc;
+  padding: 10px;
+  flex-grow: 1;
+  gap: 15px;
+}
+.navbar-link{
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: black;
+  font-size: 0.5rem;
+  font-weight: 900;
+  background-color: #5a418b;
+  border-radius: 10px;
+  text-align: center;
+}
 
+.navbar-icon{
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+}
 /* Estilo del banner */
 .logos-container {
   background: #5a418b; /* Degradado de colores */
